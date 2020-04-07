@@ -1,0 +1,200 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}D:\JonathanEng_Regression.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 May 2019, 19:56:13
+
+{com}. use "D:\JonathanEng_Regression.dta"
+{txt}(College Level Characteristics)
+
+{com}. sum k_median k_median_log asian_or_pacific_share_fall_2000 black_share_fall_2000 hisp_share_fall_2000 pct_arthuman_2000 pct_business_2000 pct_health_2000 pct_multidisci_2000 pct_publicsocial_2000 pct_socialscience_2000 pct_tradepersonal_2000 avgfacsal_thousand_2001 sticker_price_thousand_2000 ipeds_enrollment_hundred_2000 exp_instr_pc_hundred_2000 sat_avg_hundred_2001 scorecard_rej_rate_2013  grad_rate_150_p_2002 public iclevel
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}k_median {c |}{res}      2199    36928.74    12835.46      10300     123600
+{txt}k_median_log {c |}{res}      2199    10.46268    .3257671     9.2399   11.72481
+{txt}asian_o~2000 {c |}{res}      2188    .0349805    .0551505          0   .7165534
+{txt}black_s~2000 {c |}{res}      2188    .1182634    .1654516          0   .9952853
+{txt}hisp_sh~2000 {c |}{res}      2188    .0698907    .1185406          0   .9562961
+{txt}{hline 13}{c +}{hline 56}
+pct_art~2000 {c |}{res}      2185    8.264611    14.58669          0        100
+{txt}pct_bus~2000 {c |}{res}      2185    20.67333    14.83643          0        100
+{txt}pct_hea~2000 {c |}{res}      2185    13.38884    15.93171          0        100
+{txt}pct_mul~2000 {c |}{res}      2185    14.43125    18.40045          0        100
+{txt}pct_pub~2000 {c |}{res}      2185    5.300177    9.129627          0        100
+{txt}{hline 13}{c +}{hline 56}
+pct_soc~2000 {c |}{res}      2185    17.11436    17.25987          0        100
+{txt}pct_tra~2000 {c |}{res}      2185    6.767475    16.37638          0        100
+{txt}avgfa~d_2001 {c |}{res}      2035    49.31192    12.90524   3.704122   116.1174
+{txt}stick~d_2000 {c |}{res}      2008    7.689489    7.031653       .059       30.5
+{txt}ipeds_enro.. {c |}{res}      2188    64.80765    107.5252        .18    1584.88
+{txt}{hline 13}{c +}{hline 56}
+exp_i~d_2000 {c |}{res}      2162    47.40509    42.35248          0   619.7036
+{txt}sat_avg_hu~1 {c |}{res}       824    10.79994    1.297076        7.6       15.2
+{txt}scor~te_2013 {c |}{res}      1232    .3577307    .1889867          0      .9431
+{txt}grad_ra~2002 {c |}{res}      1984    .4447648     .222249    .010989          1
+{txt}{space 6}public {c |}{res}      2199    .5411551    .4984167          0          1
+{txt}{hline 13}{c +}{hline 56}
+{space 5}iclevel {c |}{res}      2199    1.401091    .5312086          1          3
+
+{com}. reg k_median_log asian_or_pacific_share_fall_2000 black_share_fall_2000 hisp_share_fall_2000 pct_arthuman_2000 pct_business_2000 pct_health_2000 pct_multidisci_2000 pct_publicsocial_2000 pct_socialscience_2000 pct_tradepersonal_2000 avgfacsal_thousand_2001 sticker_price_thousand_2000 ipeds_enrollment_hundred_2000 exp_instr_pc_hundred_2000 sat_avg_hundred_2001 scorecard_rej_rate_2013  grad_rate_150_p_2002 public iclevel
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     759
+{txt}{hline 13}{char +}{hline 30}           F( 19,   739) ={res}  105.32
+    {txt}   Model {char |} {res} 33.8004064    19  1.77896876           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 12.4823684   739  .016890891           {txt}R-squared     = {res} 0.7303
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.7234
+    {txt}   Total {char |} {res} 46.2827747   758   .06105907           {txt}Root MSE      = {res} .12996
+
+{txt}{hline 33}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    k_median_log{col 34}{c |}      Coef.{col 46}   Std. Err.{col 58}      t{col 66}   P>|t|{col 74}     [95% Con{col 87}f. Interval]
+{hline 33}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+asian_or_pacific_share_fall_2000 {c |}{col 34}{res}{space 2} .2564198{col 46}{space 2} .0875073{col 57}{space 1}    2.93{col 66}{space 3}0.003{col 74}{space 4} .0846274{col 87}{space 3} .4282123
+{txt}{space 11}black_share_fall_2000 {c |}{col 34}{res}{space 2}-.1553711{col 46}{space 2}  .034598{col 57}{space 1}   -4.49{col 66}{space 3}0.000{col 74}{space 4}-.2232931{col 87}{space 3}-.0874491
+{txt}{space 12}hisp_share_fall_2000 {c |}{col 34}{res}{space 2} .1134561{col 46}{space 2} .0746149{col 57}{space 1}    1.52{col 66}{space 3}0.129{col 74}{space 4}-.0330263{col 87}{space 3} .2599386
+{txt}{space 15}pct_arthuman_2000 {c |}{col 34}{res}{space 2}-.0066347{col 46}{space 2} .0005121{col 57}{space 1}  -12.96{col 66}{space 3}0.000{col 74}{space 4}-.0076401{col 87}{space 3}-.0056294
+{txt}{space 15}pct_business_2000 {c |}{col 34}{res}{space 2}-.0021429{col 46}{space 2} .0004912{col 57}{space 1}   -4.36{col 66}{space 3}0.000{col 74}{space 4}-.0031071{col 87}{space 3}-.0011786
+{txt}{space 17}pct_health_2000 {c |}{col 34}{res}{space 2}-.0006684{col 46}{space 2} .0005726{col 57}{space 1}   -1.17{col 66}{space 3}0.243{col 74}{space 4}-.0017925{col 87}{space 3} .0004556
+{txt}{space 13}pct_multidisci_2000 {c |}{col 34}{res}{space 2}-.0063619{col 46}{space 2} .0005105{col 57}{space 1}  -12.46{col 66}{space 3}0.000{col 74}{space 4}-.0073641{col 87}{space 3}-.0053598
+{txt}{space 11}pct_publicsocial_2000 {c |}{col 34}{res}{space 2}-.0057728{col 46}{space 2} .0006834{col 57}{space 1}   -8.45{col 66}{space 3}0.000{col 74}{space 4}-.0071144{col 87}{space 3}-.0044313
+{txt}{space 10}pct_socialscience_2000 {c |}{col 34}{res}{space 2}-.0035596{col 46}{space 2}  .000469{col 57}{space 1}   -7.59{col 66}{space 3}0.000{col 74}{space 4}-.0044804{col 87}{space 3}-.0026388
+{txt}{space 10}pct_tradepersonal_2000 {c |}{col 34}{res}{space 2}-.0001617{col 46}{space 2} .0013365{col 57}{space 1}   -0.12{col 66}{space 3}0.904{col 74}{space 4}-.0027854{col 87}{space 3}  .002462
+{txt}{space 9}avgfacsal_thousand_2001 {c |}{col 34}{res}{space 2} .0087174{col 46}{space 2}  .000742{col 57}{space 1}   11.75{col 66}{space 3}0.000{col 74}{space 4} .0072607{col 87}{space 3} .0101742
+{txt}{space 5}sticker_price_thousand_2000 {c |}{col 34}{res}{space 2} .0070716{col 46}{space 2}  .001909{col 57}{space 1}    3.70{col 66}{space 3}0.000{col 74}{space 4} .0033239{col 87}{space 3} .0108193
+{txt}{space 3}ipeds_enrollment_hundred_2000 {c |}{col 34}{res}{space 2}-.0000495{col 46}{space 2} .0000559{col 57}{space 1}   -0.89{col 66}{space 3}0.376{col 74}{space 4}-.0001592{col 87}{space 3} .0000602
+{txt}{space 7}exp_instr_pc_hundred_2000 {c |}{col 34}{res}{space 2}-.0008007{col 46}{space 2} .0001564{col 57}{space 1}   -5.12{col 66}{space 3}0.000{col 74}{space 4}-.0011077{col 87}{space 3}-.0004937
+{txt}{space 12}sat_avg_hundred_2001 {c |}{col 34}{res}{space 2} .0128017{col 46}{space 2}  .008206{col 57}{space 1}    1.56{col 66}{space 3}0.119{col 74}{space 4}-.0033082{col 87}{space 3} .0289116
+{txt}{space 9}scorecard_rej_rate_2013 {c |}{col 34}{res}{space 2}  .074699{col 46}{space 2} .0328776{col 57}{space 1}    2.27{col 66}{space 3}0.023{col 74}{space 4} .0101544{col 87}{space 3} .1392436
+{txt}{space 12}grad_rate_150_p_2002 {c |}{col 34}{res}{space 2} .3253671{col 46}{space 2} .0453799{col 57}{space 1}    7.17{col 66}{space 3}0.000{col 74}{space 4} .2362781{col 87}{space 3} .4144561
+{txt}{space 26}public {c |}{col 34}{res}{space 2} .0234944{col 46}{space 2} .0278688{col 57}{space 1}    0.84{col 66}{space 3}0.399{col 74}{space 4}-.0312171{col 87}{space 3} .0782059
+{txt}{space 25}iclevel {c |}{col 34}{res}{space 2}-.1745061{col 46}{space 2} .0678379{col 57}{space 1}   -2.57{col 66}{space 3}0.010{col 74}{space 4} -.307684{col 87}{space 3}-.0413282
+{txt}{space 27}_cons {c |}{col 34}{res}{space 2} 10.33143{col 46}{space 2}  .118953{col 57}{space 1}   86.85{col 66}{space 3}0.000{col 74}{space 4} 10.09791{col 87}{space 3} 10.56496
+{txt}{hline 33}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg k_median_log pct_arthuman_2000 pct_business_2000 pct_health_2000 pct_multidisci_2000 pct_publicsocial_2000 pct_socialscience_2000 pct_tradepersonal_2000 avgfacsal_thousand_2001 sticker_price_thousand_2000 ipeds_enrollment_hundred_2000 exp_instr_pc_hundred_2000 sat_avg_hundred_2001 scorecard_rej_rate_2013  grad_rate_150_p_2002 public iclevel
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     759
+{txt}{hline 13}{char +}{hline 30}           F( 16,   742) ={res}  116.38
+    {txt}   Model {char |} {res} 33.0947451    16  2.06842157           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 13.1880296   742  .017773625           {txt}R-squared     = {res} 0.7151
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.7089
+    {txt}   Total {char |} {res} 46.2827747   758   .06105907           {txt}Root MSE      = {res} .13332
+
+{txt}{hline 30}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                 k_median_log{col 31}{c |}      Coef.{col 43}   Std. Err.{col 55}      t{col 63}   P>|t|{col 71}     [95% Con{col 84}f. Interval]
+{hline 30}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}pct_arthuman_2000 {c |}{col 31}{res}{space 2}-.0062859{col 43}{space 2} .0005223{col 54}{space 1}  -12.04{col 63}{space 3}0.000{col 71}{space 4}-.0073112{col 84}{space 3}-.0052606
+{txt}{space 12}pct_business_2000 {c |}{col 31}{res}{space 2}-.0019521{col 43}{space 2} .0004981{col 54}{space 1}   -3.92{col 63}{space 3}0.000{col 71}{space 4}-.0029299{col 84}{space 3}-.0009743
+{txt}{space 14}pct_health_2000 {c |}{col 31}{res}{space 2}-.0003969{col 43}{space 2} .0005844{col 54}{space 1}   -0.68{col 63}{space 3}0.497{col 71}{space 4}-.0015443{col 84}{space 3} .0007504
+{txt}{space 10}pct_multidisci_2000 {c |}{col 31}{res}{space 2}-.0059225{col 43}{space 2} .0005169{col 54}{space 1}  -11.46{col 63}{space 3}0.000{col 71}{space 4}-.0069373{col 84}{space 3}-.0049077
+{txt}{space 8}pct_publicsocial_2000 {c |}{col 31}{res}{space 2}-.0055648{col 43}{space 2} .0006965{col 54}{space 1}   -7.99{col 63}{space 3}0.000{col 71}{space 4}-.0069322{col 84}{space 3}-.0041974
+{txt}{space 7}pct_socialscience_2000 {c |}{col 31}{res}{space 2}-.0035761{col 43}{space 2} .0004759{col 54}{space 1}   -7.51{col 63}{space 3}0.000{col 71}{space 4}-.0045104{col 84}{space 3}-.0026418
+{txt}{space 7}pct_tradepersonal_2000 {c |}{col 31}{res}{space 2}  .000324{col 43}{space 2} .0013679{col 54}{space 1}    0.24{col 63}{space 3}0.813{col 71}{space 4}-.0023615{col 84}{space 3} .0030095
+{txt}{space 6}avgfacsal_thousand_2001 {c |}{col 31}{res}{space 2} .0096932{col 43}{space 2} .0006863{col 54}{space 1}   14.12{col 63}{space 3}0.000{col 71}{space 4} .0083458{col 84}{space 3} .0110406
+{txt}{space 2}sticker_price_thousand_2000 {c |}{col 31}{res}{space 2} .0070388{col 43}{space 2}  .001927{col 54}{space 1}    3.65{col 63}{space 3}0.000{col 71}{space 4} .0032558{col 84}{space 3} .0108218
+{txt}ipeds_enrollment_hundred_2000 {c |}{col 31}{res}{space 2}-.0000264{col 43}{space 2}  .000057{col 54}{space 1}   -0.46{col 63}{space 3}0.643{col 71}{space 4}-.0001383{col 84}{space 3} .0000854
+{txt}{space 4}exp_instr_pc_hundred_2000 {c |}{col 31}{res}{space 2} -.000888{col 43}{space 2} .0001587{col 54}{space 1}   -5.60{col 63}{space 3}0.000{col 71}{space 4}-.0011995{col 84}{space 3}-.0005765
+{txt}{space 9}sat_avg_hundred_2001 {c |}{col 31}{res}{space 2} .0239554{col 43}{space 2} .0077321{col 54}{space 1}    3.10{col 63}{space 3}0.002{col 71}{space 4}  .008776{col 84}{space 3} .0391347
+{txt}{space 6}scorecard_rej_rate_2013 {c |}{col 31}{res}{space 2} .0427508{col 43}{space 2} .0320731{col 54}{space 1}    1.33{col 63}{space 3}0.183{col 71}{space 4}-.0202141{col 84}{space 3} .1057157
+{txt}{space 9}grad_rate_150_p_2002 {c |}{col 31}{res}{space 2} .3137317{col 43}{space 2} .0460039{col 54}{space 1}    6.82{col 63}{space 3}0.000{col 71}{space 4} .2234184{col 84}{space 3} .4040449
+{txt}{space 23}public {c |}{col 31}{res}{space 2} .0186425{col 43}{space 2} .0279322{col 54}{space 1}    0.67{col 63}{space 3}0.505{col 71}{space 4}-.0361931{col 84}{space 3}  .073478
+{txt}{space 22}iclevel {c |}{col 31}{res}{space 2}-.1592184{col 43}{space 2} .0693024{col 54}{space 1}   -2.30{col 63}{space 3}0.022{col 71}{space 4}-.2952705{col 84}{space 3}-.0231662
+{txt}{space 24}_cons {c |}{col 31}{res}{space 2} 10.15321{col 43}{space 2} .1131182{col 54}{space 1}   89.76{col 63}{space 3}0.000{col 71}{space 4} 9.931139{col 84}{space 3} 10.37528
+{txt}{hline 30}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg k_median_log asian_or_pacific_share_fall_2000 black_share_fall_2000 hisp_share_fall_2000 avgfacsal_thousand_2001 sticker_price_thousand_2000 ipeds_enrollment_hundred_2000 exp_instr_pc_hundred_2000 sat_avg_hundred_2001 scorecard_rej_rate_2013  grad_rate_150_p_2002 public iclevel
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     759
+{txt}{hline 13}{char +}{hline 30}           F( 12,   746) ={res}   93.60
+    {txt}   Model {char |} {res} 27.8111803    12  2.31759836           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 18.4715945   746  .024760851           {txt}R-squared     = {res} 0.6009
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5945
+    {txt}   Total {char |} {res} 46.2827747   758   .06105907           {txt}Root MSE      = {res} .15736
+
+{txt}{hline 33}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    k_median_log{col 34}{c |}      Coef.{col 46}   Std. Err.{col 58}      t{col 66}   P>|t|{col 74}     [95% Con{col 87}f. Interval]
+{hline 33}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+asian_or_pacific_share_fall_2000 {c |}{col 34}{res}{space 2} .2649161{col 46}{space 2} .1038715{col 57}{space 1}    2.55{col 66}{space 3}0.011{col 74}{space 4} .0610008{col 87}{space 3} .4688314
+{txt}{space 11}black_share_fall_2000 {c |}{col 34}{res}{space 2}-.1087884{col 46}{space 2} .0413014{col 57}{space 1}   -2.63{col 66}{space 3}0.009{col 74}{space 4}-.1898691{col 87}{space 3}-.0277076
+{txt}{space 12}hisp_share_fall_2000 {c |}{col 34}{res}{space 2} .0050113{col 46}{space 2} .0897003{col 57}{space 1}    0.06{col 66}{space 3}0.955{col 74}{space 4}-.1710838{col 87}{space 3} .1811064
+{txt}{space 9}avgfacsal_thousand_2001 {c |}{col 34}{res}{space 2} .0107731{col 46}{space 2}  .000865{col 57}{space 1}   12.45{col 66}{space 3}0.000{col 74}{space 4} .0090749{col 87}{space 3} .0124713
+{txt}{space 5}sticker_price_thousand_2000 {c |}{col 34}{res}{space 2} .0034132{col 46}{space 2} .0022332{col 57}{space 1}    1.53{col 66}{space 3}0.127{col 74}{space 4}-.0009709{col 87}{space 3} .0077973
+{txt}{space 3}ipeds_enrollment_hundred_2000 {c |}{col 34}{res}{space 2}-.0000211{col 46}{space 2} .0000668{col 57}{space 1}   -0.32{col 66}{space 3}0.753{col 74}{space 4}-.0001521{col 87}{space 3}   .00011
+{txt}{space 7}exp_instr_pc_hundred_2000 {c |}{col 34}{res}{space 2}-.0006727{col 46}{space 2} .0001839{col 57}{space 1}   -3.66{col 66}{space 3}0.000{col 74}{space 4}-.0010338{col 87}{space 3}-.0003117
+{txt}{space 12}sat_avg_hundred_2001 {c |}{col 34}{res}{space 2} .0032553{col 46}{space 2} .0091679{col 57}{space 1}    0.36{col 66}{space 3}0.723{col 74}{space 4}-.0147426{col 87}{space 3} .0212533
+{txt}{space 9}scorecard_rej_rate_2013 {c |}{col 34}{res}{space 2} .0227355{col 46}{space 2} .0395724{col 57}{space 1}    0.57{col 66}{space 3}0.566{col 74}{space 4} -.054951{col 87}{space 3} .1004219
+{txt}{space 12}grad_rate_150_p_2002 {c |}{col 34}{res}{space 2} .3557282{col 46}{space 2} .0540089{col 57}{space 1}    6.59{col 66}{space 3}0.000{col 74}{space 4} .2497006{col 87}{space 3} .4617558
+{txt}{space 26}public {c |}{col 34}{res}{space 2}-.0261288{col 46}{space 2} .0315218{col 57}{space 1}   -0.83{col 66}{space 3}0.407{col 74}{space 4}-.0880108{col 87}{space 3} .0357532
+{txt}{space 25}iclevel {c |}{col 34}{res}{space 2}-.0949029{col 46}{space 2} .0803855{col 57}{space 1}   -1.18{col 66}{space 3}0.238{col 74}{space 4}-.2527117{col 87}{space 3} .0629059
+{txt}{space 27}_cons {c |}{col 34}{res}{space 2} 9.978897{col 46}{space 2} .1189291{col 57}{space 1}   83.91{col 66}{space 3}0.000{col 74}{space 4} 9.745421{col 87}{space 3} 10.21237
+{txt}{hline 33}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg k_median_log asian_or_pacific_share_fall_2000 black_share_fall_2000 hisp_share_fall_2000 pct_arthuman_2000 pct_business_2000 pct_health_2000 pct_multidisci_2000 pct_publicsocial_2000 pct_socialscience_2000 pct_tradepersonal_2000
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}    2184
+{txt}{hline 13}{char +}{hline 30}           F( 10,  2173) ={res}  246.23
+    {txt}   Model {char |} {res} 122.984545    10  12.2984545           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 108.535648  2173  .049947376           {txt}R-squared     = {res} 0.5312
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5290
+    {txt}   Total {char |} {res} 231.520193  2183  .106055975           {txt}Root MSE      = {res} .22349
+
+{txt}{hline 33}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    k_median_log{col 34}{c |}      Coef.{col 46}   Std. Err.{col 58}      t{col 66}   P>|t|{col 74}     [95% Con{col 87}f. Interval]
+{hline 33}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+asian_or_pacific_share_fall_2000 {c |}{col 34}{res}{space 2} 1.405122{col 46}{space 2} .0922246{col 57}{space 1}   15.24{col 66}{space 3}0.000{col 74}{space 4} 1.224264{col 87}{space 3}  1.58598
+{txt}{space 11}black_share_fall_2000 {c |}{col 34}{res}{space 2}-.3879115{col 46}{space 2} .0295226{col 57}{space 1}  -13.14{col 66}{space 3}0.000{col 74}{space 4}-.4458071{col 87}{space 3} -.330016
+{txt}{space 12}hisp_share_fall_2000 {c |}{col 34}{res}{space 2}-.2967855{col 46}{space 2} .0417374{col 57}{space 1}   -7.11{col 66}{space 3}0.000{col 74}{space 4}-.3786349{col 87}{space 3}-.2149362
+{txt}{space 15}pct_arthuman_2000 {c |}{col 34}{res}{space 2}-.0056118{col 46}{space 2} .0004609{col 57}{space 1}  -12.17{col 66}{space 3}0.000{col 74}{space 4}-.0065157{col 87}{space 3}-.0047079
+{txt}{space 15}pct_business_2000 {c |}{col 34}{res}{space 2}-.0045143{col 46}{space 2} .0004433{col 57}{space 1}  -10.18{col 66}{space 3}0.000{col 74}{space 4}-.0053837{col 87}{space 3}-.0036449
+{txt}{space 17}pct_health_2000 {c |}{col 34}{res}{space 2}-.0066108{col 46}{space 2} .0004279{col 57}{space 1}  -15.45{col 66}{space 3}0.000{col 74}{space 4}-.0074499{col 87}{space 3}-.0057718
+{txt}{space 13}pct_multidisci_2000 {c |}{col 34}{res}{space 2}-.0058762{col 46}{space 2} .0003898{col 57}{space 1}  -15.08{col 66}{space 3}0.000{col 74}{space 4}-.0066406{col 87}{space 3}-.0051118
+{txt}{space 11}pct_publicsocial_2000 {c |}{col 34}{res}{space 2} -.007744{col 46}{space 2} .0005898{col 57}{space 1}  -13.13{col 66}{space 3}0.000{col 74}{space 4}-.0089007{col 87}{space 3}-.0065872
+{txt}{space 10}pct_socialscience_2000 {c |}{col 34}{res}{space 2} .0025755{col 46}{space 2} .0004579{col 57}{space 1}    5.63{col 66}{space 3}0.000{col 74}{space 4} .0016776{col 87}{space 3} .0034734
+{txt}{space 10}pct_tradepersonal_2000 {c |}{col 34}{res}{space 2}-.0082093{col 46}{space 2}  .000437{col 57}{space 1}  -18.79{col 66}{space 3}0.000{col 74}{space 4}-.0090662{col 87}{space 3}-.0073524
+{txt}{space 27}_cons {c |}{col 34}{res}{space 2}  10.8462{col 46}{space 2} .0308496{col 57}{space 1}  351.58{col 66}{space 3}0.000{col 74}{space 4} 10.78571{col 87}{space 3}  10.9067
+{txt}{hline 33}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg k_median_log asian_or_pacific_share_fall_2000 black_share_fall_2000 hisp_share_fall_2000 pct_arthuman_2000 pct_business_2000 pct_health_2000 pct_multidisci_2000 pct_publicsocial_2000 pct_socialscience_2000 pct_tradepersonal_2000 avgfacsal_thousand_2001 sticker_price_thousand_2000 ipeds_enrollment_hundred_2000 exp_instr_pc_hundred_2000 sat_avg_hundred_2001 scorecard_rej_rate_2013  grad_rate_150_p_2002 public iclevel par_median_thousand
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     759
+{txt}{hline 13}{char +}{hline 30}           F( 20,   738) ={res}  119.25
+    {txt}   Model {char |} {res} 35.3457181    20   1.7672859           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 10.9370567   738   .01481986           {txt}R-squared     = {res} 0.7637
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.7573
+    {txt}   Total {char |} {res} 46.2827747   758   .06105907           {txt}Root MSE      = {res} .12174
+
+{txt}{hline 33}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    k_median_log{col 34}{c |}      Coef.{col 46}   Std. Err.{col 58}      t{col 66}   P>|t|{col 74}     [95% Con{col 87}f. Interval]
+{hline 33}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+asian_or_pacific_share_fall_2000 {c |}{col 34}{res}{space 2} .4228279{col 46}{space 2} .0835714{col 57}{space 1}    5.06{col 66}{space 3}0.000{col 74}{space 4} .2587619{col 87}{space 3}  .586894
+{txt}{space 11}black_share_fall_2000 {c |}{col 34}{res}{space 2}-.0655796{col 46}{space 2} .0335793{col 57}{space 1}   -1.95{col 66}{space 3}0.051{col 74}{space 4} -.131502{col 87}{space 3} .0003428
+{txt}{space 12}hisp_share_fall_2000 {c |}{col 34}{res}{space 2} .2232833{col 46}{space 2} .0707137{col 57}{space 1}    3.16{col 66}{space 3}0.002{col 74}{space 4} .0844593{col 87}{space 3} .3621074
+{txt}{space 15}pct_arthuman_2000 {c |}{col 34}{res}{space 2}-.0078108{col 46}{space 2} .0004933{col 57}{space 1}  -15.83{col 66}{space 3}0.000{col 74}{space 4}-.0087793{col 87}{space 3}-.0068424
+{txt}{space 15}pct_business_2000 {c |}{col 34}{res}{space 2}-.0031112{col 46}{space 2} .0004697{col 57}{space 1}   -6.62{col 66}{space 3}0.000{col 74}{space 4}-.0040334{col 87}{space 3} -.002189
+{txt}{space 17}pct_health_2000 {c |}{col 34}{res}{space 2}-.0013644{col 46}{space 2} .0005406{col 57}{space 1}   -2.52{col 66}{space 3}0.012{col 74}{space 4}-.0024257{col 87}{space 3} -.000303
+{txt}{space 13}pct_multidisci_2000 {c |}{col 34}{res}{space 2}-.0071855{col 46}{space 2} .0004849{col 57}{space 1}  -14.82{col 66}{space 3}0.000{col 74}{space 4}-.0081375{col 87}{space 3}-.0062335
+{txt}{space 11}pct_publicsocial_2000 {c |}{col 34}{res}{space 2}-.0065363{col 46}{space 2} .0006444{col 57}{space 1}  -10.14{col 66}{space 3}0.000{col 74}{space 4}-.0078014{col 87}{space 3}-.0052711
+{txt}{space 10}pct_socialscience_2000 {c |}{col 34}{res}{space 2} -.004424{col 46}{space 2} .0004474{col 57}{space 1}   -9.89{col 66}{space 3}0.000{col 74}{space 4}-.0053023{col 87}{space 3}-.0035456
+{txt}{space 10}pct_tradepersonal_2000 {c |}{col 34}{res}{space 2}-.0011566{col 46}{space 2} .0012556{col 57}{space 1}   -0.92{col 66}{space 3}0.357{col 74}{space 4}-.0036216{col 87}{space 3} .0013085
+{txt}{space 9}avgfacsal_thousand_2001 {c |}{col 34}{res}{space 2} .0069759{col 46}{space 2} .0007157{col 57}{space 1}    9.75{col 66}{space 3}0.000{col 74}{space 4} .0055709{col 87}{space 3}  .008381
+{txt}{space 5}sticker_price_thousand_2000 {c |}{col 34}{res}{space 2} .0036952{col 46}{space 2} .0018184{col 57}{space 1}    2.03{col 66}{space 3}0.043{col 74}{space 4} .0001253{col 87}{space 3} .0072651
+{txt}{space 3}ipeds_enrollment_hundred_2000 {c |}{col 34}{res}{space 2}-.0000519{col 46}{space 2} .0000524{col 57}{space 1}   -0.99{col 66}{space 3}0.322{col 74}{space 4}-.0001546{col 87}{space 3} .0000509
+{txt}{space 7}exp_instr_pc_hundred_2000 {c |}{col 34}{res}{space 2} -.000851{col 46}{space 2} .0001466{col 57}{space 1}   -5.81{col 66}{space 3}0.000{col 74}{space 4}-.0011387{col 87}{space 3}-.0005632
+{txt}{space 12}sat_avg_hundred_2001 {c |}{col 34}{res}{space 2}-.0154671{col 46}{space 2} .0081698{col 57}{space 1}   -1.89{col 66}{space 3}0.059{col 74}{space 4} -.031506{col 87}{space 3} .0005717
+{txt}{space 9}scorecard_rej_rate_2013 {c |}{col 34}{res}{space 2} .0338554{col 46}{space 2} .0310548{col 57}{space 1}    1.09{col 66}{space 3}0.276{col 74}{space 4}-.0271108{col 87}{space 3} .0948216
+{txt}{space 12}grad_rate_150_p_2002 {c |}{col 34}{res}{space 2} .2535337{col 46}{space 2} .0430851{col 57}{space 1}    5.88{col 66}{space 3}0.000{col 74}{space 4} .1689497{col 87}{space 3} .3381176
+{txt}{space 26}public {c |}{col 34}{res}{space 2}-.0118084{col 46}{space 2} .0263324{col 57}{space 1}   -0.45{col 66}{space 3}0.654{col 74}{space 4}-.0635037{col 87}{space 3} .0398869
+{txt}{space 25}iclevel {c |}{col 34}{res}{space 2}-.2374097{col 46}{space 2} .0638409{col 57}{space 1}   -3.72{col 66}{space 3}0.000{col 74}{space 4}-.3627412{col 87}{space 3}-.1120782
+{txt}{space 13}par_median_thousand {c |}{col 34}{res}{space 2} .0031754{col 46}{space 2}  .000311{col 57}{space 1}   10.21{col 66}{space 3}0.000{col 74}{space 4} .0025649{col 87}{space 3} .0037859
+{txt}{space 27}_cons {c |}{col 34}{res}{space 2} 10.65289{col 46}{space 2} .1157837{col 57}{space 1}   92.01{col 66}{space 3}0.000{col 74}{space 4} 10.42559{col 87}{space 3}  10.8802
+{txt}{hline 33}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}D:\JonathanEng_Regression.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 5 May 2019, 19:58:44
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
