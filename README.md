@@ -12,4 +12,4 @@ Course Objectives:
 
 Incorporated Topics:
 * Multiple simple linear regression techniques
-* Analyzing data sets using ordinary least squares, inference, and statistical software to estimate economic models
+* Analyzing data sets using ordinary least squares, inference, and statistical software (Stata) to estimate economic models
