@@ -2,7 +2,7 @@
 ## Queens College - Econ 382: Econometrics
 
 Shortcuts: 
-[Regression Paper](https://github.com/eng-jonathan/QC_ECON_382_Econometrics/blob/master/regression%20paper/regression_paper.pdf) / [Assignment](https://github.com/eng-jonathan/QC_ECON_382_Econometrics/blob/master/regression%20paper/regression_paper_assignment.pdf) |
+[Regression Paper](https://github.com/eng-jonathan/QC_ECON_382_Econometrics/blob/master/regression%20paper/regression_paper.pdf) / [Prompt](https://github.com/eng-jonathan/QC_ECON_382_Econometrics/blob/master/regression%20paper/regression_paper_prompt.pdf) |
 [Syllabus](https://github.com/eng-jonathan/QC_ECON_382_Econometrics/blob/master/syllabus/syllabus_econ382.pdf)
 ___
 Course Objectives:
